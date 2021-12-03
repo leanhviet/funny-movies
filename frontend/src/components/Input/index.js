@@ -4,7 +4,7 @@ import React from 'react'
 // Components
 import { Form } from 'react-bootstrap'
 
-const InputComponent = ({
+export const InputComponent = ({
   id,
   type,
   className,
@@ -15,7 +15,9 @@ const InputComponent = ({
   inputRef,
   onBlur,
   onChange,
-  size
+  size,
+  minlength,
+  required = false
 }) => (
   <Form.Control
     id={id}
@@ -29,7 +31,19 @@ const InputComponent = ({
     placeholder={placeholder}
     disabled={disabled}
     size={size}
+    minlength={minlength}
+    required={required}
   />
 )
+
+InputComponent.defaultProps = {
+  type: 'text',
+  name: '',
+  onBlur: () => {},
+  onChange: () => {},
+  defaultValue: '',
+  placeholder: '',
+  className: ''
+}
 
 export default React.memo(InputComponent)

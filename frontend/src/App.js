@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
   whyDidYouUpdate(MainLayout)
 }
 
-const App = () => (
+export const App = () => (
   <div className="App">
     <MainLayout />
   </div>

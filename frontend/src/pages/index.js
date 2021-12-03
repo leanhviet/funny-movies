@@ -8,21 +8,23 @@ import ROUTES from '../constants/routes'
 // Screen
 import Home from './Home'
 import Share from './Share'
-
-// Components
-import Header from '../components/Header'
+import Register from './Register'
+import Login from './Login'
+import NotFound from './NotFound'
 
 // Split router
 const AppRouter = () => (
   <Switch>
     <Route exact path={ROUTES.HOME} component={Home} />
     <Route path={`${ROUTES.SHARE}`} component={Share} />
+    <Route path={`${ROUTES.REGISTER}`} component={Register} />
+    <Route path={`${ROUTES.LOGIN}`} component={Login} />
+    <Route component={NotFound} />
   </Switch>
 )
 
-const App = () => (
+export const App = () => (
   <Router>
-    <Header />
     <AppRouter />
   </Router>
 )

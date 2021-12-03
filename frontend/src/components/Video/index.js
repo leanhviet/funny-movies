@@ -4,7 +4,7 @@ import React from 'react'
 // Components
 import { Row, Col, Card } from 'react-bootstrap'
 
-const VideoComponent = ({
+export const VideoComponent = ({
   id,
   title,
   sharedBy,
@@ -15,18 +15,18 @@ const VideoComponent = ({
   const videoSrc = `https://www.youtube.com/embed/${id}?rel=0`
 
   return (
-    <Card style={{ marginTop: '20px' }}>
+    <Card className="video-cmp">
       <Row>
-        <Col md={6}>
+        <Col md={6} className="video-cmp__col1">
           <iframe
             title={title}
             src={videoSrc}
             frameBorder="0"
             allow="autoplay; fullscreen"
-            style={{ width: '100%', height: '350px' }}
+            className="video-cmp__col1__iframe"
           />
         </Col>
-        <Col md={6}>
+        <Col md={6} className="video-cmp__col2">
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <p>Shared by: {sharedBy}</p>
@@ -45,15 +45,7 @@ const VideoComponent = ({
               </span>
             </div>
             <p>Description:</p>
-            <Card.Text
-              style={{
-                display: '-webkit-box',
-                '-webkit-line-clamp': '6',
-                '-webkit-box-orient': 'vertical',
-                maxHeight: '150px',
-                overflow: 'hidden'
-              }}
-            >
+            <Card.Text className="video-cmp__col2__desc">
               {description}
             </Card.Text>
           </Card.Body>
@@ -61,6 +53,15 @@ const VideoComponent = ({
       </Row>
     </Card>
   )
+}
+
+VideoComponent.defaultProps = {
+  id: '',
+  title: '',
+  sharedBy: '',
+  likeCount: 0,
+  dislikeCount: 0,
+  description: ''
 }
 
 export default React.memo(VideoComponent)

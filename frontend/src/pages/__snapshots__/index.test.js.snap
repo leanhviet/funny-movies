@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should be render snapshot App 1`] = `
+<BrowserRouter>
+  <AppRouter />
+</BrowserRouter>
+`;

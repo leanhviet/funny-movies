@@ -4,47 +4,48 @@ const jwt = require('jsonwebtoken')
 // Models
 const UserModel = require('../model/user')
 
-const register = async (req, res) => {
+const register = async (req, res, next) => {
   const { password, email } = req.body || ''
 
-  UserModel.findOne({ email }).then((user) => {
-    if (user) {
-      res.json({
-        message: 'Email already exists',
-        status: 500
-      })
-    }
-  })
+  try {
+    const checkEmail = await UserModel.findOne({ email })
 
-  bcrypt.hash(password, 10, (err, hashedPass) => {
-    if (err) {
-      res.send({
-        message: err,
-        status: 500
-      })
+    if (checkEmail) {
+      return res.status(400).json({ message: 'Email already exists' })
     }
 
-    const newUser = {
-      email,
-      password: hashedPass
-    }
-
-    const user = new UserModel(newUser)
-    user
-      .save()
-      .then(() => {
+    bcrypt.hash(password, 10, (err, hashedPass) => {
+      if (err) {
         res.send({
-          message: 'Register successfully',
-          status: 200
-        })
-      })
-      .catch(() => {
-        res.send({
-          message: 'An error occurred!',
+          message: err,
           status: 500
         })
-      })
-  })
+      }
+
+      const newUser = {
+        email,
+        password: hashedPass
+      }
+
+      const user = new UserModel(newUser)
+      user
+        .save()
+        .then(() => {
+          res.send({
+            message: 'Register successfully',
+            status: 200
+          })
+        })
+        .catch(() => {
+          res.send({
+            message: 'An error occurred!',
+            status: 500
+          })
+        })
+    })
+  } catch (error) {
+    return res.status(500).json({ message: error })
+  }
 }
 
 const login = async (req, res) => {
@@ -66,14 +67,14 @@ const login = async (req, res) => {
           })
 
           res.send({
-            message: 'Register successfully',
+            message: 'Login successfully',
             token,
             status: 200
           })
         } else {
           res.send({
             message: 'Password does not matched',
-            status: 200
+            status: 400
           })
         }
       })
