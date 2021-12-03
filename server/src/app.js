@@ -5,8 +5,7 @@ const routes = require('./routes')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
-// Contants
-const PORT = 4321
+const { PORT } = process.env || 3000
 
 app.use(cors())
 
@@ -32,5 +31,5 @@ app.use(
 app.use(routes)
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`)
+  console.log(`Server listening on port http://localhost:${PORT}`)
 })

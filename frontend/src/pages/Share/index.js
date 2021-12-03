@@ -14,6 +14,7 @@ import { parseJwt } from '../../helpers/function'
 
 // Constants
 import { USER_KEY } from '../../constants/localStorage'
+const { REACT_APP_API_URL } = process.env
 
 export const Share = (props) => {
   const [errorMsg, setErrorMsg] = useState('')
@@ -59,7 +60,7 @@ export const Share = (props) => {
       })
     }
 
-    fetch('http://localhost:4321/api/sharevideo', requestOptions)
+    fetch(`${REACT_APP_API_URL}/api/sharevideo`, requestOptions)
       .then((response) => response.json())
       .then(() => {
         setSuccessMsg('Congrats to share a movie successfully!')

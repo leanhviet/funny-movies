@@ -13,6 +13,7 @@ import { setStorage, getStorage } from '../../helpers/storage'
 
 // Constants
 import { USER_KEY } from '../../constants/localStorage'
+const { REACT_APP_API_URL } = process.env
 
 export const Login = (props) => {
   const [email, setEmail] = useState('')
@@ -52,7 +53,7 @@ export const Login = (props) => {
 
     try {
       const requestLogin = await fetch(
-        'http://localhost:4321/api/auth/login',
+        `${REACT_APP_API_URL}/api/auth/login`,
         requestOptions
       )
       const newData = await requestLogin.json()

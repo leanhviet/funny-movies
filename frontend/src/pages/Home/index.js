@@ -6,12 +6,14 @@ import { Container } from 'react-bootstrap'
 import Video from '../../components/Video'
 import Header from '../../components/Header'
 
+const { REACT_APP_API_URL } = process.env
+
 export const Home = () => {
   const [videos, setVideos] = useState([])
 
   useEffect(() => {
     if (videos && !!!videos.length) {
-      fetch('http://localhost:4321/api/videos')
+      fetch(`${REACT_APP_API_URL}/api/videos`)
         .then((response) => response.json())
         .then((data) => setVideos((data.value || []).reverse()))
         .catch((err) => {

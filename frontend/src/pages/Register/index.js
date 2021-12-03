@@ -13,6 +13,7 @@ import { getStorage } from '../../helpers/storage'
 
 // Constants
 import { USER_KEY } from '../../constants/localStorage'
+const { REACT_APP_API_URL } = process.env
 
 export const Register = (props) => {
   const [email, setEmail] = useState('')
@@ -60,7 +61,7 @@ export const Register = (props) => {
 
     try {
       const register = await fetch(
-        'http://localhost:4321/api/auth/register',
+        `${REACT_APP_API_URL}/api/auth/register`,
         requestOptions
       )
 
