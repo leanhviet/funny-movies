@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register page should be render snapshot Register page 1`] = `
+<Fragment>
+  <Form
+    onSubmit={[Function]}
+    style={
+      Object {
+        "border": "3px solid rgba(0,0,0,.1)",
+        "height": "580px",
+        "margin": "10% auto",
+        "padding": "70px 30px",
+        "width": "1020px",
+      }
+    }
+  >
+    <h2
+      style={
+        Object {
+          "marginBottom": "60px",
+          "textAlign": "center",
+        }
+      }
+    >
+      Register
+    </h2>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      className="mb-5"
+    >
+      <FormLabel
+        column={true}
+        sm={2}
+        visuallyHidden={false}
+      >
+        Email
+      </FormLabel>
+      <Col
+        sm={10}
+      >
+        <Memo(InputComponent)
+          onChange={[Function]}
+          placeholder="Enter your email"
+          size="lg"
+          type="email"
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      className="mb-5"
+    >
+      <FormLabel
+        column={true}
+        sm={2}
+        visuallyHidden={false}
+      >
+        Password
+      </FormLabel>
+      <Col
+        sm={10}
+      >
+        <Memo(InputComponent)
+          minlength={5}
+          onChange={[Function]}
+          placeholder="Enter your password"
+          required={true}
+          size="lg"
+          type="password"
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      className="mb-5"
+    >
+      <FormLabel
+        column={true}
+        sm={2}
+        visuallyHidden={false}
+      >
+        Comfirm Password
+      </FormLabel>
+      <Col
+        sm={10}
+      >
+        <Memo(InputComponent)
+          minlength={5}
+          onChange={[Function]}
+          placeholder="Re-enter your password"
+          required={true}
+          size="lg"
+          type="password"
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+    >
+      <Col
+        sm={
+          Object {
+            "offset": 2,
+            "span": 10,
+          }
+        }
+      >
+        <Button
+          active={false}
+          block={true}
+          className="w-100"
+          disabled={false}
+          size="lg"
+          type="submit"
+          variant="primary"
+        >
+          Register
+        </Button>
+        <p
+          style={
+            Object {
+              "marginTop": "10px",
+              "textAlign": "center",
+            }
+          }
+        >
+          Already have an account? 
+          <Link
+            to="/login"
+          >
+            Login
+          </Link>
+        </p>
+      </Col>
+    </FormGroup>
+  </Form>
+</Fragment>
+`;

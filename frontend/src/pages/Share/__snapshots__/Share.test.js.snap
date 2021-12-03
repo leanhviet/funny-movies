@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share page should be render snapshot Share page 1`] = `
+<Fragment>
+  <Memo(HeaderComponent) />
+  <Form
+    onSubmit={[Function]}
+    style={
+      Object {
+        "border": "3px solid rgba(0,0,0,.1)",
+        "height": "300px",
+        "margin": "10% auto",
+        "padding": "70px 30px",
+        "width": "780px",
+      }
+    }
+  >
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      className="mb-5"
+      controlId="formHorizontalEmail"
+    >
+      <FormLabel
+        column={true}
+        sm={2}
+        visuallyHidden={false}
+      >
+        Youtube URL
+      </FormLabel>
+      <Col
+        sm={10}
+      >
+        <Memo(InputComponent)
+          onChange={[Function]}
+          placeholder="Enter youtube URL"
+          size="lg"
+          type="text"
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+    >
+      <Col
+        sm={
+          Object {
+            "offset": 2,
+            "span": 10,
+          }
+        }
+      >
+        <Button
+          active={false}
+          block={true}
+          className="w-100"
+          disabled={false}
+          size="lg"
+          type="submit"
+          variant="primary"
+        >
+          Share
+        </Button>
+      </Col>
+    </FormGroup>
+  </Form>
+</Fragment>
+`;

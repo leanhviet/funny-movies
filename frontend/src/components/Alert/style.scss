@@ -1,0 +1,8 @@
+.alert-cmp {
+  display: flex;
+  justify-content: space-between;
+
+  &__closeBtn {
+    cursor: pointer;
+  }
+}

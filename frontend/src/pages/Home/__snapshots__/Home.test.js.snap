@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component should be render snapshot Home component 1`] = `
+<Fragment>
+  <Memo(HeaderComponent) />
+  <Container
+    fluid={false}
+  />
+</Fragment>
+`;
