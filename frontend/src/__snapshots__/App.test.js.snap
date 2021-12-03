@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should be render snapshot App 1`] = `
+<div
+  className="App"
+>
+  <App />
+</div>
+`;

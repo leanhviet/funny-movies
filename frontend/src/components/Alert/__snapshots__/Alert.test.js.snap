@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert component should be render snapshot Alert component 1`] = `
+<Alert
+  className="alert-cmp"
+  closeLabel="Close alert"
+  show={true}
+  transition={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "appear": false,
+        "in": false,
+        "mountOnEnter": false,
+        "timeout": 300,
+        "unmountOnExit": false,
+      },
+      "render": [Function],
+    }
+  }
+  variant=""
+>
+  <div>
+    <AlertHeading />
+    <p />
+  </div>
+  <span
+    className="alert-cmp__closeBtn"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-times"
+    />
+  </span>
+</Alert>
+`;
+
+exports[`Alert component should be render snapshot Alert component 2`] = `
+<Alert
+  className="alert-cmp"
+  closeLabel="Close alert"
+  show={true}
+  transition={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "appear": false,
+        "in": false,
+        "mountOnEnter": false,
+        "timeout": 300,
+        "unmountOnExit": false,
+      },
+      "render": [Function],
+    }
+  }
+  variant="danger"
+>
+  <div>
+    <AlertHeading>
+      Error
+    </AlertHeading>
+    <p>
+      All of fields are required
+    </p>
+  </div>
+  <span
+    className="alert-cmp__closeBtn"
+    onClick={[MockFunction]}
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-times"
+    />
+  </span>
+</Alert>
+`;

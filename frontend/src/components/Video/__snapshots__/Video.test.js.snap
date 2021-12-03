@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video component should be render snapshot Video component 1`] = `
+<Card
+  body={false}
+  className="video-cmp"
+>
+  <Row>
+    <Col
+      className="video-cmp__col1"
+      md={6}
+    >
+      <iframe
+        allow="autoplay; fullscreen"
+        className="video-cmp__col1__iframe"
+        frameBorder="0"
+        src="https://www.youtube.com/embed/?rel=0"
+        title=""
+      />
+    </Col>
+    <Col
+      className="video-cmp__col2"
+      md={6}
+    >
+      <CardBody>
+        <CardTitle />
+        <p>
+          Shared by: 
+        </p>
+        <div>
+          <span>
+            0
+             
+            <i
+              aria-hidden="true"
+              className="fa fa-thumbs-o-up"
+              style={
+                Object {
+                  "marginRight": "20px",
+                }
+              }
+            />
+          </span>
+          <span>
+            0
+             
+            <i
+              aria-hidden="true"
+              className="fa fa-thumbs-o-down"
+            />
+          </span>
+        </div>
+        <p>
+          Description:
+        </p>
+        <CardText
+          className="video-cmp__col2__desc"
+        />
+      </CardBody>
+    </Col>
+  </Row>
+</Card>
+`;
+
+exports[`Video component should be render snapshot Video component 2`] = `
+<Card
+  body={false}
+  className="video-cmp"
+>
+  <Row>
+    <Col
+      className="video-cmp__col1"
+      md={6}
+    >
+      <iframe
+        allow="autoplay; fullscreen"
+        className="video-cmp__col1__iframe"
+        frameBorder="0"
+        src="https://www.youtube.com/embed/XMNRRE11?rel=0"
+        title="Khoa Pug and Vuong Pham"
+      />
+    </Col>
+    <Col
+      className="video-cmp__col2"
+      md={6}
+    >
+      <CardBody>
+        <CardTitle>
+          Khoa Pug and Vuong Pham
+        </CardTitle>
+        <p>
+          Shared by: 
+          vietla@gmail.com
+        </p>
+        <div>
+          <span>
+            12222
+             
+            <i
+              aria-hidden="true"
+              className="fa fa-thumbs-o-up"
+              style={
+                Object {
+                  "marginRight": "20px",
+                }
+              }
+            />
+          </span>
+          <span>
+            10
+             
+            <i
+              aria-hidden="true"
+              className="fa fa-thumbs-o-down"
+            />
+          </span>
+        </div>
+        <p>
+          Description:
+        </p>
+        <CardText
+          className="video-cmp__col2__desc"
+        >
+          Johnny Dang lua dao chiem doat 30 ty
+        </CardText>
+      </CardBody>
+    </Col>
+  </Row>
+</Card>
+`;

@@ -1,0 +1,12 @@
+.login-pg {
+  width: 1020px;
+  margin: 10% auto;
+  height: 620px;
+  border: 3px solid rgba(0,0,0,.1);
+  padding: 70px 30px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}

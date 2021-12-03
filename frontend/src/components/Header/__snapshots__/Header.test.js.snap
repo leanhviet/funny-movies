@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should be render snapshot Alert component 1`] = `
+<div
+  className="header-cmp"
+>
+  <Navbar
+    bg="light"
+    className="header-cmp__wrap"
+    collapseOnSelect={false}
+    expand="lg"
+    variant="light"
+  >
+    <Link
+      className="header-cmp__wrap__logo"
+      to="/"
+    >
+      <h1>
+        <i
+          aria-hidden="true"
+          className="fa fa-home"
+        />
+         Funny movies
+      </h1>
+    </Link>
+    <div
+      className="ml-auto header-cmp__wrap__btn-grp"
+    >
+      <Link
+        to="/login"
+      >
+        <Button
+          active={false}
+          disabled={false}
+          variant="outline-primary"
+        >
+          Login / Register
+        </Button>
+      </Link>
+    </div>
+  </Navbar>
+  <hr
+    className="header-cmp__line"
+  />
+</div>
+`;

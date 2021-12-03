@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login page should be render snapshot Login page 1`] = `
+<Fragment>
+  <Form
+    className="login-pg"
+    onSubmit={[Function]}
+  >
+    <h2
+      className="login-pg__title"
+    >
+      Login
+    </h2>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      className="mb-5"
+    >
+      <FormLabel
+        column={true}
+        sm={2}
+        visuallyHidden={false}
+      >
+        Email
+      </FormLabel>
+      <Col
+        sm={10}
+      >
+        <Memo(InputComponent)
+          onChange={[Function]}
+          placeholder="Enter your email"
+          size="lg"
+          type="email"
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      className="mb-5"
+    >
+      <FormLabel
+        column={true}
+        sm={2}
+        visuallyHidden={false}
+      >
+        Password
+      </FormLabel>
+      <Col
+        sm={10}
+      >
+        <Memo(InputComponent)
+          minlength={5}
+          onChange={[Function]}
+          placeholder="Enter your password"
+          required={true}
+          size="lg"
+          type="password"
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+    >
+      <Col
+        sm={
+          Object {
+            "offset": 2,
+            "span": 10,
+          }
+        }
+      >
+        <Button
+          active={false}
+          block={true}
+          className="w-100"
+          disabled={false}
+          size="lg"
+          type="submit"
+          variant="primary"
+        >
+          Login
+        </Button>
+        <p
+          style={
+            Object {
+              "marginTop": "10px",
+              "textAlign": "center",
+            }
+          }
+        >
+          Don't have an account? 
+          <Link
+            to="/register"
+          >
+            Create One
+          </Link>
+        </p>
+      </Col>
+    </FormGroup>
+  </Form>
+</Fragment>
+`;

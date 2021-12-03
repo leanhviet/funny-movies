@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should be render snapshot Input component 1`] = `
+<FormControl
+  className="form-control "
+  defaultValue=""
+  name=""
+  onBlur={[Function]}
+  onChange={[Function]}
+  placeholder=""
+  required={false}
+  type="text"
+/>
+`;
+
+exports[`Input component should be render snapshot Input component 2`] = `
+<FormControl
+  className="form-control input-fmt"
+  defaultValue="test"
+  disabled={false}
+  id="123"
+  minlength={8}
+  name="input-txt"
+  onBlur={[Function]}
+  onChange={[Function]}
+  placeholder="Enter your email"
+  required={false}
+  size="lg"
+  type="text"
+/>
+`;
