@@ -11,7 +11,7 @@ const shareVideo = async (req, res) => {
   const { APP_API_URL, APP_API_KEY } = process.env
   const { videoUrl, email } = req.body || ''
   let videoId = videoUrl.split('v=')[1]
-  const ampersandPosition = videoId.indexOf('&')
+  const ampersandPosition = (videoId || '').indexOf('&')
 
   if (ampersandPosition != -1) {
     videoId = videoId.substring(0, ampersandPosition)
