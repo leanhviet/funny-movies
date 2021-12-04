@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const router = express()
+const config = require('config');
 
 // Routes
 const getVideos = require('./getVideos');
@@ -8,10 +9,19 @@ const shareVideo = require('./shareVideo');
 const { register, login } = require('./auth');
 
 // Constants
-const uri = 'mongodb://localhost:27017'
-const dbName = 'funny-movies-db'
+const dbConfig = config.get('FunnyMovie.dbConfig.dbName');
 
-mongoose.connect(`${uri}/${dbName}`)
+mongoose.connect(
+  dbConfig,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+).then(() => {
+  console.log('Connect Atlas MongoDB successfully')
+}).catch((err) => {
+  console.log('Connect Atlas MongoDB failure', err)
+})
 
 router.get('/api/videos', getVideos)
 router.post('/api/sharevideo', shareVideo)
